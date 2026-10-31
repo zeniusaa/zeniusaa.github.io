@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raka Zeniusa Barron - Peta Rute Proyek</title>
+<meta name="description" content="Portofolio Raka Zeniusa Barron, Backend &amp; Fullstack Developer di Bandung: PumpHealth, HAMIM API, dan proyek web, mobile, serta data.">
+<link rel="preload" href="fonts/BarlowCondensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/Barlow-400.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/Barlow-400i.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/Barlow-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/Barlow-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/BarlowCondensed-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/BarlowCondensed-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/BarlowCondensed-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/BarlowCondensed-800.woff2) format('woff2')}
+
+:root{
+  --ground:#f4f5f0;
+  --ink:#15171c;
+  --ink-2:#464b54;
+  --rule:#d6d8cf;
+  --rail-idle:#dfe1d9;
+  --bone:#ecebe4;
+  --red:#d4262f;
+  --blue:#1d5fc4;
+  --green:#0f7f4b;
+  --orange:#ee8a00;
+  --line:var(--ink);
+  --on-line:#fff;
+  --gutter:96px;
+  --max:1240px;
+  --cond:'Barlow Condensed','Arial Narrow',sans-serif;
+  --body:'Barlow','Segoe UI',sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.6 var(--body);font-variant-numeric:tabular-nums}
+::selection{background:var(--orange);color:var(--ink)}
+a{color:inherit;text-decoration-thickness:1.5px;text-underline-offset:4px}
+a:hover{text-decoration-thickness:3px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
+html{scrollbar-color:var(--ink) var(--rail-idle);scrollbar-width:thin}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff}
+.topbar .wrap{display:flex;align-items:center;gap:28px;height:56px}
+.mark{font:800 22px/1 var(--cond);letter-spacing:.02em;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.mark svg{flex:none}
+.lines-nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.lines-nav::-webkit-scrollbar{display:none}
+.lines-nav a{font:600 16px/1 var(--cond);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:9px 12px;border-radius:999px;display:flex;align-items:center;gap:8px;white-space:nowrap;color:#d9dce3;transition:background .3s var(--ease),color .3s var(--ease)}
+.lines-nav a:hover{background:#2a2d35;color:#fff}
+.lines-nav a[aria-current="true"]{background:#fff;color:var(--ink)}
+.swatch{width:18px;height:6px;border-radius:3px;background:var(--c);flex:none}
+
+/* ---------- hero ---------- */
+.hero{padding:40px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:start}
+.nameplate{background:var(--ink);color:#fff;border-radius:14px;padding:40px 40px 36px;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:0 18px 40px -22px rgba(21,23,28,.55)}
+.nameplate .stripe{display:grid;grid-template-columns:repeat(4,1fr);height:10px;margin:-40px -40px 32px}
+.nameplate .stripe i{display:block}
+.nameplate h1{font:800 clamp(56px,6.4vw,96px)/.88 var(--cond);letter-spacing:-.01em;text-transform:uppercase;margin:0 0 18px;text-wrap:balance}
+.role{font:600 26px/1.15 var(--cond);letter-spacing:.03em;text-transform:uppercase;margin:0 0 22px;display:flex;align-items:center;gap:12px}
+.role .swatch{width:34px;height:10px}
+.nameplate .lead{color:#d6d8de;font-size:18px;margin:0 0 28px;max-width:38ch}
+.departure{border-top:1px solid #3a3e47;padding-top:18px;margin-top:auto;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
+.departure dt{font:600 15px/1.5 var(--cond);letter-spacing:.08em;text-transform:uppercase;color:#9fa4ae}
+.departure dd{margin:0;color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{font:700 18px/1 var(--cond);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;transition:transform .35s var(--ease),background .3s var(--ease)}
+.btn svg{flex:none}
+.btn--light{background:#fff;color:var(--ink)}
+.btn--light:hover{transform:translateY(-2px)}
+.btn--ghost{border:2px solid #5b606b;color:#fff}
+.btn--ghost:hover{border-color:#fff}
+
+.system{display:flex;flex-direction:column}
+.system h2{font:700 30px/1.1 var(--cond);text-transform:uppercase;letter-spacing:.02em;margin:0 0 6px}
+.system p.note{margin:0 0 4px;color:var(--ink-2);font-size:15px;max-width:60ch}
+.map{width:100%;height:auto;margin-top:8px}
+.map text{font-family:var(--cond);fill:var(--ink)}
+.map .st-name{font-size:17px;font-weight:700;letter-spacing:.01em}
+.map .st-code{font-size:11px;font-weight:700;fill:#fff;letter-spacing:.03em}
+.map .st-sub{font-size:12.5px;font-weight:500;fill:var(--ink-2)}
+.map a{cursor:pointer}
+.map a .marker{transition:r .3s var(--ease)}
+.map a:hover .marker,.map a:focus-visible .marker{r:11}
+.map a:hover .st-name{text-decoration:underline}
+.map a:focus-visible{outline:none}
+.map a:focus-visible .st-name{text-decoration:underline}
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:18px 0 0;padding:0;list-style:none;font:600 16px/1.3 var(--cond);letter-spacing:.03em;text-transform:uppercase}
+.legend li{display:flex;align-items:center;gap:9px}
+.legend .swatch{width:26px;height:8px}
+.legend .kind{width:34px;height:0;border-top:6px solid var(--ink)}
+.legend .kind--dash{border-top-style:dashed}
+.legend .sep{flex-basis:100%;height:0}
+
+.map .marker,.map .stop > *,.map .terminal,.map .pulse{transform-box:fill-box;transform-origin:center}
+.map .pulse{pointer-events:none}
+
+/* ---------- line headers ---------- */
+.line-head{background:var(--line);color:var(--on-line);padding:56px 0 52px;margin-top:24px}
+.line-head .wrap{display:grid;grid-template-columns:auto 1fr;gap:12px 28px;align-items:center}
+.line-letter{width:96px;height:96px;border-radius:50%;border:6px solid var(--on-line);display:grid;place-items:center;font:800 56px/1 var(--cond)}
+.line-head h2{font:800 clamp(44px,6vw,80px)/.9 var(--cond);text-transform:uppercase;letter-spacing:-.005em;margin:0}
+.line-head p{margin:6px 0 0;font-size:18px;max-width:62ch}
+.line-head ol{grid-column:2;display:flex;flex-wrap:wrap;gap:8px 18px;margin:12px 0 0;padding:0;list-style:none;font:600 17px/1.2 var(--cond);letter-spacing:.03em;text-transform:uppercase}
+.line-head ol a{text-decoration:none;display:flex;align-items:center;gap:8px}
+.line-head ol a:hover span:last-child{text-decoration:underline}
+.chip{display:inline-grid;place-items:center;min-width:34px;height:26px;padding:0 7px;border-radius:13px;font:700 14px/1 var(--cond);letter-spacing:.04em;background:var(--on-line);color:var(--line)}
+
+/* ---------- stations ---------- */
+.station{position:relative;padding:72px 0 64px;--pad:32px;--rail-x:calc(max(0px,(100% - var(--max)) / 2) + var(--pad) + var(--gutter) / 2)}
+.station + .station{border-top:1px solid var(--rule)}
+.rail{position:absolute;top:0;bottom:0;left:calc(var(--rail-x) - 5px);width:10px;background:var(--rail-idle);border-radius:5px}
+.rail::after{content:"";position:absolute;inset:0;border-radius:5px;background:var(--line);transform-origin:top}
+.station.is-dashed .rail::after{background:repeating-linear-gradient(to bottom,var(--line) 0 22px,transparent 22px 36px)}
+.station.is-interchange .rail{left:calc(var(--rail-x) - 13px);width:26px;background:none}
+.station.is-interchange .rail::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,var(--rail-idle) 0 10px,transparent 10px 16px,var(--rail-idle) 16px 26px)}
+.station.is-interchange .rail::after{background:linear-gradient(to right,var(--red) 0 10px,transparent 10px 16px,var(--blue) 16px 26px)}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .rail::after{animation:fill linear both;animation-timeline:view();animation-range:entry 20% cover 60%}
+    @keyframes fill{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    .line-head{animation:wipe linear both;animation-timeline:view();animation-range:entry 0% entry 75%}
+    @keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+    .line-head .line-letter{animation:roll linear both;animation-timeline:view();animation-range:entry 15% entry 90%}
+    @keyframes roll{from{transform:translateX(-56px) rotate(-150deg)}to{transform:none}}
+  }
+}
+@media (prefers-reduced-motion:no-preference){
+  .station:target .gate .lamp{animation:arrive 1s var(--ease) .5s 2}
+  @keyframes arrive{from{filter:drop-shadow(0 0 0 #ff3b30)}50%{filter:drop-shadow(0 0 7px #ff3b30)}to{filter:drop-shadow(0 0 0 #ff3b30)}}
+}
+.station-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad) 0 calc(var(--pad) + var(--gutter))}
+.sign{display:grid;grid-template-columns:1fr auto;gap:10px 24px;align-items:end;margin-bottom:28px}
+.sign h3 .codes{display:inline-flex;gap:8px;vertical-align:middle;margin-left:14px;transform:translateY(-.08em)}
+.code{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--c,var(--line));color:#fff;font:800 19px/1 var(--cond);letter-spacing:.02em}
+.code--orange{color:var(--ink)}
+.sign h3{position:relative;font:800 clamp(44px,5.4vw,76px)/.92 var(--cond);text-transform:uppercase;letter-spacing:-.005em;margin:0}
+/* palang pintu kereta di rel: tiang di tengah rel, lengan menunjuk ke judul */
+.gate{position:absolute;top:.46em;left:calc(var(--gutter) / -2 - 13.5px);width:72px;height:72px;margin-top:-30px;overflow:visible;pointer-events:none}
+.gate .arm{transform-box:view-box;transform-origin:12px 27px}
+.gate .stripe{fill:var(--line)}
+.is-interchange .gate .stripe:nth-of-type(odd){fill:var(--red)}
+.is-interchange .gate .stripe:nth-of-type(even){fill:var(--blue)}
+.gate .lamp{fill:#8a8e96}
+.station.is-here .gate .lamp{fill:#ff3b30}
+.motion .gate .arm{transform:rotate(-72deg);transition:transform .7s var(--ease)}
+.motion .station.is-here .gate .arm{transform:none}
+.motion .station.is-here .gate .lamp{animation:blink 1s steps(2,jump-none) infinite}
+@keyframes blink{50%{fill:#7a1a14}}
+.kind-tag{font:700 15px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:10px;white-space:nowrap;padding-bottom:8px}
+.kind-tag::before{content:"";width:38px;border-top:6px solid var(--line)}
+.is-dashed .kind-tag::before{border-top-style:dashed}
+.is-interchange .kind-tag::before{border-top-color:var(--ink)}
+.band{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:0;margin:4px 0 0;font:600 18px/1.25 var(--cond);letter-spacing:.02em}
+.band span{padding:7px 14px;background:var(--bone);border-right:2px solid var(--ground)}
+.band span:first-child{background:var(--line);color:var(--on-line);border-radius:6px 0 0 6px}
+.band span:last-child{border-radius:0 6px 6px 0;border-right:0}
+.is-interchange .band span:first-child{background:var(--ink);color:#fff}
+
+.body-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:24px 56px}
+.prose p{margin:0 0 16px;max-width:68ch}
+.prose h4{font:700 20px/1.2 var(--cond);letter-spacing:.04em;text-transform:uppercase;margin:24px 0 10px}
+.prose ul{margin:0;padding:0;list-style:none}
+.prose li{position:relative;padding-left:24px;margin-bottom:9px;max-width:66ch}
+.prose li::before{content:"";position:absolute;left:2px;top:.62em;width:10px;height:10px;border-radius:50%;border:3px solid var(--line);background:var(--ground)}
+.is-interchange .prose li::before{border-color:var(--ink)}
+.facts{margin:0;border-top:2px solid var(--ink);align-self:start}
+.facts div{display:grid;grid-template-columns:1fr auto;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.facts dt{color:var(--ink-2);font-size:15px}
+.facts dd{margin:0;font:700 22px/1.1 var(--cond);text-align:right;letter-spacing:.01em}
+.facts dd small{display:block;font:500 13px/1.3 var(--body);color:var(--ink-2);letter-spacing:0}
+.facts .repo{border-bottom:0;padding-top:14px}
+.facts .repo dd{font:600 16px/1.3 var(--body)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 0;padding:0;list-style:none}
+.stack li{font:600 14px/1 var(--cond);letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:999px;padding:6px 11px}
+
+/* platform views (screenshots) */
+.platform{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:40px}
+.platform figure{margin:0;grid-column:span 2}
+.platform figure.lead{grid-column:span 6}
+.platform figure.half{grid-column:span 3}
+.platform a{display:block;border-radius:8px;overflow:hidden;border:1.5px solid var(--ink);background:#fff;box-shadow:0 14px 30px -20px rgba(21,23,28,.5);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.platform a:hover{transform:translateY(-3px);box-shadow:0 22px 40px -22px rgba(21,23,28,.55)}
+.platform img{width:100%}
+.platform figcaption{font-size:14px;color:var(--ink-2);margin-top:8px;display:flex;gap:8px;align-items:baseline}
+.platform figcaption b{font:700 14px/1 var(--cond);letter-spacing:.06em;color:var(--ink);text-transform:uppercase}
+.platform.tall figure:not(.lead) a{aspect-ratio:16/10}
+.platform.tall figure:not(.lead) img{height:100%;object-fit:cover;object-position:top}
+.platform.phones{grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;max-width:880px}
+.platform.phones figure{grid-column:span 1}
+.platform.phones--6{grid-template-columns:repeat(6,minmax(0,1fr));max-width:none}
+.platform.phones a{border-radius:14px}
+.footnote{font-size:14px;color:var(--ink-2);margin:18px 0 0;max-width:80ch}
+.no-shot code{font-size:.92em}
+.no-shot{margin-top:32px;border:2px dashed var(--line);border-radius:10px;padding:22px 24px;max-width:70ch;color:var(--ink-2);font-size:15px}
+
+/* ---------- career route ---------- */
+.career{padding:88px 0 80px;background:var(--ink);color:#fff}
+.career h2,.skills h2,.terminus h2{font:800 clamp(44px,6vw,80px)/.9 var(--cond);text-transform:uppercase;margin:0 0 12px}
+.career .intro{color:#c9ccd3;max-width:60ch;margin:0 0 48px;font-size:18px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative}
+.route::before{content:"";position:absolute;top:21px;left:0;right:0;height:10px;border-radius:5px;background:#fff}
+.route li{position:relative;padding:62px 18px 0 0}
+.route li::before{content:"";position:absolute;top:10px;left:0;width:32px;height:32px;border-radius:50%;background:var(--ink);border:6px solid #fff}
+.route li.now::before{background:#fff;border-color:var(--orange);box-shadow:0 0 0 6px rgba(238,138,0,.3)}
+.route .when{font:700 16px/1.2 var(--cond);letter-spacing:.06em;text-transform:uppercase;color:var(--orange)}
+.route h3{font:700 24px/1.05 var(--cond);text-transform:uppercase;margin:6px 0 6px}
+.route p{margin:0;color:#c9ccd3;font-size:15px}
+
+.motion .route::before{transform:scaleX(0);transform-origin:left;transition:transform 1.5s var(--ease)}
+.motion .route.go::before{transform:none}
+.motion .route li{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .7s var(--ease)}
+.motion .route li::before{transform:scale(.3);transition:transform .6s var(--ease)}
+.motion .route.go li{opacity:1;transform:none}
+.motion .route.go li::before{transform:none}
+.motion .route.go li:nth-child(2),.motion .route.go li:nth-child(2)::before{transition-delay:.25s}
+.motion .route.go li:nth-child(3),.motion .route.go li:nth-child(3)::before{transition-delay:.5s}
+.motion .route.go li:nth-child(4),.motion .route.go li:nth-child(4)::before{transition-delay:.75s}
+.motion .route.go li:nth-child(5),.motion .route.go li:nth-child(5)::before{transition-delay:1s}
+.route.live li.now::before{animation:now 2.4s ease-out infinite}
+@keyframes now{from{box-shadow:0 0 0 0 rgba(238,138,0,.6)}70%,to{box-shadow:0 0 0 16px rgba(238,138,0,0)}}
+
+/* ---------- skills ---------- */
+.skills{padding:88px 0 72px}
+.skills .intro{color:var(--ink-2);max-width:60ch;margin:0 0 36px;font-size:18px}
+.skill-table{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.skill-row{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--ink)}
+.skill-row h3{font:700 22px/1.1 var(--cond);text-transform:uppercase;margin:0;display:flex;align-items:center;gap:10px}
+.skill-row p{margin:0}
+
+/* ---------- terminus ---------- */
+.terminus{padding:88px 0 40px;border-top:10px solid var(--ink)}
+.terminus .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.contact-mail{font:800 clamp(32px,4vw,56px)/1 var(--cond);text-transform:lowercase;text-decoration:none;display:inline-block;margin:10px 0 18px;border-bottom:5px solid var(--orange);padding-bottom:4px;word-break:break-all}
+.contact-mail:hover{border-bottom-color:var(--ink)}
+.terminus p{max-width:52ch}
+.credits{width:100%;border-collapse:collapse;font-size:15px}
+.credits caption{text-align:left;font:700 22px/1.1 var(--cond);text-transform:uppercase;letter-spacing:.03em;padding-bottom:12px;border-bottom:3px solid var(--ink)}
+.credits th,.credits td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.credits th{font:700 14px/1.2 var(--cond);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.colophon{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;color:var(--ink-2);font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .body-grid{grid-template-columns:1fr}
+  .terminus .wrap{grid-template-columns:1fr}
+  .skill-table{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  :root{--gutter:62px}
+  body{font-size:16px}
+  .map-scroll{overflow-x:auto;margin:0 -18px;padding:0 18px}
+  .map{min-width:560px}
+  .platform figcaption{display:block}
+  .platform figcaption b{display:block;margin-bottom:2px}
+  .wrap{padding:0 18px}
+  .topbar .wrap{gap:12px}
+  .mark span{display:none}
+  .nameplate{padding:28px 22px 26px}
+  .nameplate .stripe{margin:-28px -22px 24px}
+  .role{font-size:21px}
+  .departure{grid-template-columns:1fr;gap:0}
+  .departure dd{margin-bottom:8px}
+  .line-head .wrap{grid-template-columns:1fr}
+  .line-letter{width:72px;height:72px;font-size:42px;border-width:5px}
+  .line-head ol{grid-column:1}
+  .station{padding:48px 0 44px;--pad:18px}
+  .rail{width:8px;left:calc(var(--rail-x) - 4px)}
+  .station.is-interchange .rail{width:20px;left:calc(var(--rail-x) - 10px)}
+  .station.is-interchange .rail::before{background:linear-gradient(to right,var(--rail-idle) 0 8px,transparent 8px 12px,var(--rail-idle) 12px 20px)}
+  .station.is-interchange .rail::after{background:linear-gradient(to right,var(--red) 0 8px,transparent 8px 12px,var(--blue) 12px 20px)}
+  .sign{grid-template-columns:1fr}
+  .gate{width:44px;height:44px;margin-top:-18.5px;left:calc(var(--gutter) / -2 - 8.25px)}
+  .band{font-size:15px}
+  .band span{padding:6px 10px}
+  .platform{grid-template-columns:1fr 1fr;gap:12px}
+  .platform figure,.platform figure.half{grid-column:span 1}
+  .platform figure.lead{grid-column:span 2}
+  .platform.phones,.platform.phones--6{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .route{grid-template-columns:1fr;padding-left:6px}
+  .route::before{top:0;bottom:0;left:6px;right:auto;width:10px;height:auto;background:#fff}
+  .route li{padding:0 0 30px 52px}
+  .route li::before{top:2px;left:-5px}
+  .motion .route::before{transform:scaleY(0);transform-origin:top}
+  .skill-row{grid-template-columns:1fr;gap:6px}
+}
+
+/* ---------- print (A4) ---------- */
+@media print{
+  @page{size:A4;margin:12mm 12mm 14mm}
+  :root{--gutter:52px}
+  body{font-size:10.5pt;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .topbar,.actions,.skip{display:none}
+  .wrap{padding:0;max-width:none}
+  .hero{padding:0 0 10px}
+  .hero .wrap{grid-template-columns:1fr;gap:16px}
+  .nameplate{box-shadow:none;padding:24px 26px 22px}
+  .nameplate .stripe{margin:-24px -26px 18px}
+  .nameplate h1{font-size:54pt}
+  .system p.note{display:none}
+  .map{max-height:118mm}
+  .line-head{margin-top:14px;padding:18px 0 16px;break-inside:avoid;break-after:avoid}
+  .line-letter{width:60px;height:60px;font-size:34px;border-width:4px}
+  .line-head h2{font-size:40pt}
+  .station{padding:26px 0 18px;--pad:0px;break-before:auto}
+  .rail{width:6px;left:calc(var(--rail-x) - 3px)}
+  .rail::after{animation:none!important;transform:none!important}
+  .station.is-interchange .rail{width:16px;left:calc(var(--rail-x) - 8px)}
+  .station.is-interchange .rail::before{display:none}
+  .station.is-interchange .rail::after{background:linear-gradient(to right,var(--red) 0 6px,transparent 6px 10px,var(--blue) 10px 16px)}
+  .sign{margin-bottom:14px;break-after:avoid;break-inside:avoid}
+  .sign h3{font-size:34pt}
+  .gate{width:36px;height:36px;margin-top:-15px;left:calc(var(--gutter) / -2 - 6.75px)}
+  .gate .lamp{fill:#ff3b30}
+  .code{width:28px;height:28px;font-size:13px}
+  .body-grid{grid-template-columns:1.5fr 1fr;gap:12px 28px}
+  .platform{gap:8px;margin-top:14px;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .platform figure{grid-column:span 1}
+  .platform figure.lead,.platform figure.half{grid-column:span 2}
+  .platform.phones{grid-template-columns:repeat(4,minmax(0,1fr));max-width:120mm}
+  .platform.phones--6{grid-template-columns:repeat(6,minmax(0,1fr));max-width:none}
+  .platform.phones figure{grid-column:span 1}
+  .platform figcaption{font-size:8pt;margin-top:4px}
+  .no-shot{margin-top:12px;padding:10px 14px}
+  .prose h4{margin:12px 0 6px}
+  .prose li{margin-bottom:4px}
+  .platform figure{break-inside:avoid}
+  .platform a{box-shadow:none}
+  .platform.tall figure:not(.lead) a{aspect-ratio:auto}
+  .platform.tall figure:not(.lead) img{height:auto}
+  .career{padding:24px 18px;break-before:page}
+  .route li{padding:52px 10px 0 0}
+  .skills{padding:28px 0 16px;break-inside:avoid}
+  .terminus{padding:24px 0 0;break-before:page}
+  .terminus .wrap{grid-template-columns:1fr;gap:20px}
+  a{text-decoration:none}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .route li,.route li::before,.route::before{opacity:1!important;transform:none!important}
+  .gate .arm{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="mark" href="#rute">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="#fff" stroke="#ee8a00" stroke-width="6"/></svg>
+      <span>Raka Zeniusa Barron</span>
+    </a>
+    <nav class="lines-nav" aria-label="Jalur">
+      <a href="#rute" data-nav="rute">Peta</a>
+      <a href="#jalur-backend" data-nav="backend"><i class="swatch" style="--c:var(--red)"></i>Backend</a>
+      <a href="#jalur-web" data-nav="web"><i class="swatch" style="--c:var(--blue)"></i>Web</a>
+      <a href="#jalur-mobile" data-nav="mobile"><i class="swatch" style="--c:var(--green)"></i>Mobile</a>
+      <a href="#jalur-data" data-nav="data"><i class="swatch" style="--c:var(--orange)"></i>Data</a>
+      <a href="#karier" data-nav="karier">Karier</a>
+      <a href="#kontak" data-nav="kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="rute" aria-label="Pembuka">
+  <div class="wrap">
+    <div class="nameplate">
+      <div class="stripe" aria-hidden="true"><i style="background:var(--red)"></i><i style="background:var(--blue)"></i><i style="background:var(--green)"></i><i style="background:var(--orange)"></i></div>
+      <h1>Raka Zeniusa Barron</h1>
+      <p class="role"><i class="swatch" style="--c:var(--red)"></i>Backend &amp; Fullstack Developer</p>
+      <p class="lead">Saya membangun aplikasi web dari database dan REST API sampai antarmuka React, dan memastikan semuanya teruji sebelum dirilis.</p>
+      <dl class="departure">
+        <dt>Asal</dt><dd>S1 Teknik Informatika, Universitas Muhammadiyah Bandung, lulus 2026, IPK 3,68</dd>
+        <dt>Sekarang</dt><dd>IT &amp; Software Developer di PT Performa Integritas Indonesia (Fortasindo)</dd>
+        <dt>Kota</dt><dd>Bandung, Jawa Barat</dd>
+      </dl>
+      <div class="actions">
+        <a class="btn btn--light" href="#pumphealth">Mulai dari PumpHealth
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2v13M3.5 9.5 9 15l5.5-5.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--ghost" href="mailto:keyra6566@gmail.com">Kirim email</a>
+        <a class="btn btn--ghost" href="https://github.com/zeniusaa">GitHub</a>
+      </div>
+    </div>
+
+    <div class="system">
+      <h2>Peta rute proyek</h2>
+      <p class="note">Semua jalur berangkat dari kampus. Jalur Backend dan Web bertemu di PumpHealth. Klik halte untuk melompat ke proyeknya.</p>
+      <div class="map-scroll"><svg class="map" viewBox="16 118 624 336" role="img" aria-labelledby="map-title">
+        <title id="map-title">Peta empat jalur proyek: Backend, Web, Mobile, dan Data, berangkat dari kampus UM Bandung; jalur Backend dan Web bertemu di halte PumpHealth.</title>
+        <g class="track" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+          <path data-start="0" d="M70 210H130L170 170H250" stroke="#d4262f"/>
+          <path data-start="196.6" d="M250 170H320L400 250" stroke="#d4262f"/>
+          <path data-start="0" d="M70 250H270" stroke="#1d5fc4" stroke-dasharray="14 11" stroke-linecap="butt"/>
+          <path data-start="200" d="M270 250H400" stroke="#1d5fc4"/>
+          <path data-start="330" d="M400 250H540" stroke="#1d5fc4" stroke-dasharray="14 11" stroke-linecap="butt"/>
+          <path data-start="0" d="M70 290H130L170 330H390" stroke="#0f7f4b" stroke-dasharray="14 11" stroke-linecap="butt"/>
+          <path data-start="0" d="M70 310H100L190 400H410" stroke="#ee8a00" stroke-dasharray="14 11" stroke-linecap="butt"/>
+        </g>
+        <!-- terminal kampus -->
+        <g class="terminal">
+          <path d="M20 194 57 158 94 194Z" fill="#15171c"/>
+          <circle cx="57" cy="181" r="8.5" fill="#fff"/>
+          <path d="M57 175.5V181h4" fill="none" stroke="#15171c" stroke-width="2" stroke-linecap="round"/>
+          <rect x="26" y="192" width="62" height="130" fill="#fff" stroke="#15171c" stroke-width="4"/>
+          <rect x="32" y="199" width="50" height="14" rx="2" fill="#15171c"/>
+          <text x="57" y="210" text-anchor="middle" class="st-code" style="font-size:11px">UMB</text>
+          <path d="M34 300v-52a8 8 0 0 1 16 0v52" fill="#dfe1d9" stroke="#15171c" stroke-width="3"/>
+          <path d="M54 300v-52a8 8 0 0 1 16 0v52" fill="#dfe1d9" stroke="#15171c" stroke-width="3"/>
+          <rect x="82" y="202" width="8" height="16" rx="2" fill="#d4262f" stroke="#15171c" stroke-width="2"/>
+          <rect x="82" y="242" width="8" height="16" rx="2" fill="#1d5fc4" stroke="#15171c" stroke-width="2"/>
+          <rect x="82" y="282" width="8" height="14" rx="2" fill="#0f7f4b" stroke="#15171c" stroke-width="2"/>
+          <rect x="82" y="300" width="8" height="14" rx="2" fill="#ee8a00" stroke="#15171c" stroke-width="2"/>
+          <rect x="16" y="320" width="82" height="9" rx="2" fill="#15171c"/>
+          <text x="70" y="354" text-anchor="middle" class="st-name">Kampus UMB</text>
+          <text x="70" y="372" text-anchor="middle" class="st-sub">2022 - 2026</text>
+        </g>
+        <path id="route-red" d="M92 210H130L170 170H320L400 250" fill="none" stroke="none"/>
+        <g id="train" opacity="0" aria-hidden="true">
+          <rect x="-12" y="-6.5" width="24" height="13" rx="6.5" fill="#fff" stroke="#15171c" stroke-width="3"/>
+          <rect x="2" y="-2.5" width="6" height="5" rx="1.5" fill="#d4262f"/>
+          <animateMotion id="train-run" dur="3.8s" begin="indefinite" fill="freeze" rotate="auto" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".45 0 .2 1"><mpath href="#route-red"/></animateMotion>
+        </g>
+
+        <a class="stop" data-at="196.6" href="#hamim" aria-label="B1 HAMIM API">
+          <circle class="marker" cx="250" cy="170" r="8" fill="#fff" stroke="#d4262f" stroke-width="4"/>
+          <circle cx="222" cy="138" r="13" fill="#d4262f"/><text x="222" y="142" text-anchor="middle" class="st-code">B1</text>
+          <text x="241" y="144" class="st-name">HAMIM API</text>
+        </a>
+        <a class="stop" data-at="90" href="#santuary" aria-label="W1 41Santuary">
+          <circle class="marker" cx="160" cy="250" r="8" fill="#fff" stroke="#1d5fc4" stroke-width="4"/>
+          <circle cx="132" cy="226" r="13" fill="#1d5fc4"/><text x="132" y="230" text-anchor="middle" class="st-code">W1</text>
+          <text x="151" y="232" class="st-name">41Santuary</text>
+        </a>
+        <a class="stop" data-at="200" href="#htel" aria-label="W2 Sistem HT-el">
+          <circle class="marker" cx="270" cy="250" r="8" fill="#fff" stroke="#1d5fc4" stroke-width="4"/>
+          <circle cx="242" cy="279" r="13" fill="#1d5fc4"/><text x="242" y="283" text-anchor="middle" class="st-code">W2</text>
+          <text x="261" y="285" class="st-name">Sistem HT-el</text>
+        </a>
+        <a class="stop" data-at="379.6" href="#pumphealth" aria-label="B2 dan W3 PumpHealth, halte transfer">
+          <circle class="marker" cx="400" cy="250" r="15" fill="#fff" stroke="#15171c" stroke-width="5"/>
+          <circle cx="428" cy="196" r="13" fill="#d4262f"/><text x="428" y="200" text-anchor="middle" class="st-code">B2</text>
+          <circle cx="458" cy="196" r="13" fill="#1d5fc4"/><text x="458" y="200" text-anchor="middle" class="st-code">W3</text>
+          <text x="420" y="232" class="st-name" style="font-size:24px">PumpHealth</text>
+        </a>
+        <a class="stop" data-at="470" href="#family100" aria-label="W4 Family 100">
+          <circle class="marker" cx="540" cy="250" r="8" fill="#fff" stroke="#1d5fc4" stroke-width="4"/>
+          <circle cx="512" cy="279" r="13" fill="#1d5fc4"/><text x="512" y="283" text-anchor="middle" class="st-code">W4</text>
+          <text x="531" y="285" class="st-name">Family 100</text>
+        </a>
+        <a class="stop" data-at="206.6" href="#hamora" aria-label="M1 Hamora">
+          <circle class="marker" cx="260" cy="330" r="8" fill="#fff" stroke="#0f7f4b" stroke-width="4"/>
+          <circle cx="232" cy="359" r="13" fill="#0f7f4b"/><text x="232" y="363" text-anchor="middle" class="st-code">M1</text>
+          <text x="251" y="365" class="st-name">Hamora</text>
+        </a>
+        <a class="stop" data-at="336.6" href="#hahatix" aria-label="M2 Hahatix">
+          <circle class="marker" cx="390" cy="330" r="8" fill="#fff" stroke="#0f7f4b" stroke-width="4"/>
+          <circle cx="362" cy="359" r="13" fill="#0f7f4b"/><text x="362" y="363" text-anchor="middle" class="st-code">M2</text>
+          <text x="381" y="365" class="st-name">Hahatix</text>
+        </a>
+        <a class="stop" data-at="247.3" href="#stres" aria-label="D1 Prediksi Stres">
+          <circle class="marker" cx="280" cy="400" r="8" fill="#fff" stroke="#ee8a00" stroke-width="4"/>
+          <circle cx="252" cy="429" r="13" fill="#ee8a00"/><text x="252" y="433" text-anchor="middle" class="st-code" style="fill:#15171c">D1</text>
+          <text x="271" y="435" class="st-name">Prediksi Stres</text>
+        </a>
+        <a class="stop" data-at="377.3" href="#sampah" aria-label="D2 Deteksi Sampah">
+          <circle class="marker" cx="410" cy="400" r="8" fill="#fff" stroke="#ee8a00" stroke-width="4"/>
+          <circle cx="412" cy="429" r="13" fill="#ee8a00"/><text x="412" y="433" text-anchor="middle" class="st-code" style="fill:#15171c">D2</text>
+          <text x="431" y="435" class="st-name">Deteksi Sampah</text>
+        </a>
+      </svg></div>
+      <ul class="legend">
+        <li><i class="swatch" style="--c:var(--red)"></i>Backend</li>
+        <li><i class="swatch" style="--c:var(--blue)"></i>Web</li>
+        <li><i class="swatch" style="--c:var(--green)"></i>Mobile</li>
+        <li><i class="swatch" style="--c:var(--orange)"></i>Data</li>
+        <li class="sep" aria-hidden="true"></li>
+        <li><i class="kind"></i>Kerja produksi</li>
+        <li><i class="kind kind--dash"></i>Kuliah, kelompok, atau pribadi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= interchange: PumpHealth ================= -->
+<section class="station is-interchange" id="pumphealth" data-line="backend" style="--line:var(--ink)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>PumpHealth <span class="codes"><span class="code" style="--c:var(--red)">B2</span><span class="code" style="--c:var(--blue)">W3</span></span></h3>
+      <p class="kind-tag">Kerja produksi</p>
+      <p class="band"><span>Halte transfer</span><span>Sep 2026 - sekarang</span><span>IT &amp; Software Developer</span><span>Fortasindo</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Aplikasi web berlangganan untuk memantau kesehatan pompa sentrifugal di industri, dibuat di PT Performa Integritas Indonesia (Fortasindo). Rumus penilaian yang sebelumnya hidup di spreadsheet Excel engineering saya terjemahkan menjadi engine perhitungan yang teruji, lalu saya bungkus menjadi aplikasi multi-perusahaan dengan hak akses per peran.</p>
+        <h4>Yang saya bangun</h4>
+        <ul>
+          <li>Health Index dari 5 kelompok parameter: hydraulic, vibration, temperatur/pelumasan/kebisingan, motor listrik, dan kondisi fisik.</li>
+          <li>Modul Design untuk sizing pompa dan membandingkan pompa calon dari vendor.</li>
+          <li>Analisis reliabilitas Weibull: MTTF, shape factor, dan probability plot.</li>
+          <li>Inspeksi berkala dengan foto kondisi, grafik tren, dan import data dari Excel.</li>
+        </ul>
+        <h4>Cara kerja</h4>
+        <ul>
+          <li>Hak akses berbasis peran dan policy, pemisahan data per perusahaan, dan audit log.</li>
+          <li>Dokumentasi teknis: PRD, arsitektur, struktur database, rumus, dan changelog.</li>
+          <li>Menelusuri bug yang hanya muncul di CI Linux (beda huruf besar/kecil pada path) sampai akar masalahnya.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Automated test</dt><dd>396<small>PHPUnit unit &amp; feature</small></dd></div>
+        <div><dt>Kelompok parameter</dt><dd>5</dd></div>
+        <div><dt>CI</dt><dd>Setiap push<small>GitHub Actions: test + lint</small></dd></div>
+        <div><dt>Modul utama</dt><dd>4<small>Health Index, Design, Weibull, Inspeksi</small></dd></div>
+        <div class="repo"><dt>Kode</dt><dd>Privat, milik perusahaan</dd></div>
+      </dl>
+    </div>
+    <ul class="stack"><li>Laravel 12</li><li>PHP 8.3</li><li>Inertia.js</li><li>React 19</li><li>TypeScript</li><li>Tailwind CSS</li><li>MySQL 8</li><li>PHPUnit</li><li>GitHub Actions</li></ul>
+    <div class="platform">
+      <figure class="lead"><a href="img/pumphealth-asset-detail.jpg"><img src="img/pumphealth-asset-detail.jpg" width="1440" height="900" alt="Detail aset pompa P-101A: gauge Total Pump Health 96,69, skor mechanical, hydraulic, electric, dan radar lima kelompok parameter"></a><figcaption><b>Detail aset</b> Health Index total dan profil 5 kelompok parameter</figcaption></figure>
+      <figure class="half"><a href="img/pumphealth-dashboard.jpg"><img src="img/pumphealth-dashboard.jpg" width="1440" height="900" loading="lazy" alt="Dashboard PumpHealth: total aset, rata-rata Health Index 77,76, distribusi kategori kesehatan"></a><figcaption><b>Dashboard</b> ringkasan kesehatan semua pompa</figcaption></figure>
+      <figure class="half"><a href="img/pumphealth-design.jpg"><img src="img/pumphealth-design.jpg" width="1440" height="900" loading="lazy" alt="Modul Pump Design: TDH, NPSHA, daya motor, dan cek kecocokan pompa Vendor A dan Vendor B"></a><figcaption><b>Pump Design</b> sizing dan cek pompa vendor</figcaption></figure>
+      <figure class="half"><a href="img/pumphealth-weibull.jpg"><img src="img/pumphealth-weibull.jpg" width="1440" height="900" loading="lazy" alt="Analisis Weibull: MTTF 10.604 jam, kurva CDF, dan probability plot"></a><figcaption><b>Weibull</b> MTTF dan probability plot</figcaption></figure>
+    </div>
+    <p class="footnote">Screenshot memakai data demo fiktif (perusahaan, lokasi, dan nilai pompa bukan data pelanggan). Kode sumber bersifat privat milik perusahaan.</p>
+  </div>
+</section>
+
+<!-- ================= Backend line ================= -->
+<header class="line-head" id="jalur-backend" style="--line:var(--red)" data-line="backend">
+  <div class="wrap">
+    <div class="line-letter" aria-hidden="true">B</div>
+    <div>
+      <h2>Jalur Backend</h2>
+      <p>REST API, database, autentikasi, dan logika bisnis di sisi server.</p>
+    </div>
+    <ol aria-label="Halte jalur Backend">
+      <li><a href="#hamim"><span class="chip">B1</span><span>HAMIM API</span></a></li>
+      <li><a href="#pumphealth"><span class="chip">B2</span><span>PumpHealth</span></a></li>
+    </ol>
+  </div>
+</header>
+
+<section class="station" id="hamim" data-line="backend" style="--line:var(--red)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>HAMIM API <span class="codes"><span class="code">B1</span></span></h3>
+      <p class="kind-tag">Kerja produksi (magang)</p>
+      <p class="band"><span>Jun - Agu 2026</span><span>3 bulan</span><span>Backend Developer Intern</span><span>Academy Baitul Maqdis</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>REST API untuk HAMIM, aplikasi hafalan Al-Qur'an bergamifikasi yang dipakai aplikasi Flutter dan dashboard admin web. Setiap ayat dipelajari bertahap: mendengarkan, membaca, lalu kuis menyusun potongan ayat.</p>
+        <h4>Fitur</h4>
+        <ul>
+          <li>Login email/password, Google OAuth di browser, dan Google Sign-In native untuk Flutter.</li>
+          <li>Satu endpoint mengirim audio, teks Arab, terjemahan, dan soal untuk satu kelompok ayat sekaligus.</li>
+          <li>Sistem nyawa, level, leaderboard, dan akun premium.</li>
+          <li>API admin terpisah untuk dashboard React + TypeScript: kelola pengguna, surah dan ayat, aset, serta analitik.</li>
+        </ul>
+        <h4>Keputusan teknis</h4>
+        <ul>
+          <li>Token admin terpisah dari token pengguna dan tidak bisa saling dipakai.</li>
+          <li>Kuis dinilai di server: urutan opsi diacak dan kunci jawaban tidak pernah dikirim ke client.</li>
+          <li>Idempotency key dan transaksi database agar nyawa tidak terpotong dua kali saat retry atau double-tap.</li>
+          <li>Nyawa dipulihkan dari selisih waktu saat request, tanpa cron job; deploy dengan Docker dan health check.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Surah</dt><dd>114</dd></div>
+        <div><dt>Ayat di database</dt><dd>6.236</dd></div>
+        <div><dt>Level</dt><dd>15</dd></div>
+        <div><dt>Masa berlaku token</dt><dd>7 / 30 hari<small>access / refresh</small></dd></div>
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/hamim-backend">zeniusaa/hamim-backend</a></dd></div>
+      </dl>
+    </div>
+    <ul class="stack"><li>Node.js</li><li>Express</li><li>Prisma</li><li>MySQL</li><li>JWT</li><li>Google OAuth</li><li>Zod</li><li>Docker</li><li>React + Vite</li></ul>
+    <div class="platform tall">
+      <figure class="lead"><a href="img/hamim-dashboard.jpg"><img src="img/hamim-dashboard.jpg" width="1440" height="900" loading="lazy" alt="Dashboard admin HAMIM: total pengguna, 114 surah, 6.236 ayat, aktivitas kuis, dan papan peringkat"></a><figcaption><b>Dashboard admin</b> konten, aktivitas kuis, dan papan peringkat</figcaption></figure>
+      <figure><a href="img/hamim-users.jpg"><img src="img/hamim-users.jpg" width="1440" height="900" loading="lazy" alt="Halaman Pengguna di admin HAMIM dengan level, status premium, dan verifikasi"></a><figcaption><b>Pengguna</b> level, premium, verifikasi</figcaption></figure>
+      <figure><a href="img/hamim-surahs.jpg"><img src="img/hamim-surahs.jpg" width="1440" height="900" loading="lazy" alt="Daftar surah dan ayat di admin HAMIM"></a><figcaption><b>Surah &amp; ayat</b> 114 surah</figcaption></figure>
+      <figure><a href="img/hamim-surah.jpg"><img src="img/hamim-surah.jpg" width="1440" height="900" loading="lazy" alt="Detail surah Al-Fatihah: kelompok ayat, qari, jumlah soal kuis dan audio per ayat"></a><figcaption><b>Detail surah</b> kelompok ayat, soal, audio</figcaption></figure>
+    </div>
+    <p class="footnote">Dashboard admin dijalankan ulang di laptop dengan data dummy dari skrip seed repo.</p>
+  </div>
+</section>
+
+<!-- ================= Web line ================= -->
+<header class="line-head" id="jalur-web" style="--line:var(--blue)" data-line="web">
+  <div class="wrap">
+    <div class="line-letter" aria-hidden="true">W</div>
+    <div>
+      <h2>Jalur Web</h2>
+      <p>Aplikasi web dari Laravel server-side sampai situs statis dan game di browser.</p>
+    </div>
+    <ol aria-label="Halte jalur Web">
+      <li><a href="#santuary"><span class="chip">W1</span><span>41Santuary</span></a></li>
+      <li><a href="#htel"><span class="chip">W2</span><span>Sistem HT-el</span></a></li>
+      <li><a href="#pumphealth"><span class="chip">W3</span><span>PumpHealth</span></a></li>
+      <li><a href="#family100"><span class="chip">W4</span><span>Family 100</span></a></li>
+    </ol>
+  </div>
+</header>
+
+<section class="station is-dashed" id="santuary" data-line="web" style="--line:var(--blue)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>41Santuary <span class="codes"><span class="code">W1</span></span></h3>
+      <p class="kind-tag">Tugas kuliah</p>
+      <p class="band"><span>Situs statis</span><span>Pemesanan tiket bioskop</span><span>HTML, CSS, jQuery</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Website pemesanan tiket bioskop: daftar film sedang tayang dan akan datang, halaman detail film, lalu memilih kursi secara interaktif di denah studio.</p>
+      </div>
+      <dl class="facts">
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/41Santuary">zeniusaa/41Santuary</a></dd></div>
+      </dl>
+    </div>
+    <div class="platform">
+      <figure class="lead"><a href="img/santuary-home.jpg"><img src="img/santuary-home.jpg" width="1440" height="900" loading="lazy" alt="Beranda 41 Sentury dengan banner Pesan Tiket Tanpa Antri"></a><figcaption><b>Beranda</b></figcaption></figure>
+      <figure class="half"><a href="img/santuary-film.jpg"><img src="img/santuary-film.jpg" width="1440" height="900" loading="lazy" alt="Halaman detail film dengan poster, pemeran, dan sinopsis"></a><figcaption><b>Detail film</b></figcaption></figure>
+      <figure class="half"><a href="img/santuary-kursi.jpg"><img src="img/santuary-kursi.jpg" width="1440" height="900" loading="lazy" alt="Denah kursi studio dengan status tersedia, dipilih, dan terjual"></a><figcaption><b>Pilih kursi</b> tersedia, dipilih, terjual</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="station is-dashed" id="htel" data-line="web" style="--line:var(--blue)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>Sistem HT-el <span class="codes"><span class="code">W2</span></span></h3>
+      <p class="kind-tag">Tugas akhir</p>
+      <p class="band"><span>2026</span><span>Tugas Akhir S1</span><span>Universitas Muhammadiyah Bandung</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Sistem berbasis web untuk koordinasi pengajuan Hak Tanggungan Elektronik antara PPAT dan bank. PPAT mengajukan dokumen dan bukti pembayaran; bank memverifikasi dan memperbarui status sampai pengajuan selesai dan diarsipkan.</p>
+        <ul>
+          <li>Dua peran pengguna, Bank dan PPAT, dengan dashboard masing-masing.</li>
+          <li>Unggah dokumen (akad, APHT, sertifikat), bukti pembayaran, dan surat pernyataan.</li>
+          <li>Alur validasi dokumen dengan catatan penolakan, status pengajuan, dan arsip pengajuan selesai.</li>
+          <li>Kelola pengguna oleh bank.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Peran pengguna</dt><dd>2<small>Bank, PPAT</small></dd></div>
+        <div><dt>Render</dt><dd>Server-side<small>Laravel Blade</small></dd></div>
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/htel-system">zeniusaa/htel-system</a></dd></div>
+      </dl>
+    </div>
+    <ul class="stack"><li>Laravel 12</li><li>Blade</li><li>MySQL</li></ul>
+    <div class="platform tall">
+      <figure class="lead"><a href="img/htel-validasi.jpg"><img src="img/htel-validasi.jpg" width="1366" height="768" loading="lazy" alt="Halaman validasi pengajuan: pratinjau dokumen KTP dan sertifikat di samping data debitur"></a><figcaption><b>Validasi</b> pratinjau dokumen di samping data pengajuan</figcaption></figure>
+      <figure><a href="img/htel-login.jpg"><img src="img/htel-login.jpg" width="1366" height="768" loading="lazy" alt="Halaman login Sistem Pengajuan Hak Tanggungan"></a><figcaption><b>Login</b></figcaption></figure>
+      <figure><a href="img/htel-dashboard.jpg"><img src="img/htel-dashboard.jpg" width="1366" height="768" loading="lazy" alt="Dashboard bank dengan ringkasan status pengajuan"></a><figcaption><b>Dashboard bank</b> status pengajuan</figcaption></figure>
+      <figure><a href="img/htel-detail.jpg"><img src="img/htel-detail.jpg" width="1366" height="768" loading="lazy" alt="Detail pengajuan: data debitur, sertifikat, dan APHT"></a><figcaption><b>Detail pengajuan</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="station is-dashed" id="family100" data-line="web" style="--line:var(--blue)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>Family 100 Kelas <span class="codes"><span class="code">W4</span></span></h3>
+      <p class="kind-tag">Proyek pribadi</p>
+      <p class="band"><span>2026</span><span>Game kuis untuk kelas</span><span>HTML, CSS, JavaScript</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Game kuis bergaya survei untuk dipakai guru di kelas. Guru menjadi operator: mengetik jawaban siswa, dan papan membuka jawaban yang cocok beserta poinnya untuk tim yang sedang bermain.</p>
+        <ul>
+          <li>Bank soal IPA dan Informatika kelas VII dan VIII, urutan soal diacak setiap permainan.</li>
+          <li>Pencocokan jawaban toleran salah ketik: normalisasi teks, jarak Levenshtein, kemiripan token, dan daftar kata kunci per jawaban.</li>
+          <li>Skor dua tim, tiga kesalahan lalu giliran pindah, serta efek suara yang dibuat langsung dengan Web Audio API.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Paket soal</dt><dd>4</dd></div>
+        <div><dt>Jumlah soal</dt><dd>51</dd></div>
+        <div><dt>Library</dt><dd>Tanpa library</dd></div>
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/Family100">zeniusaa/Family100</a></dd></div>
+      </dl>
+    </div>
+    <div class="platform">
+      <figure class="half"><a href="img/family100-play.jpg"><img src="img/family100-play.jpg" width="1440" height="900" loading="lazy" alt="Papan Family 100: tiga jawaban terbuka meski diketik dengan salah ketik, skor Tim 1 225"></a><figcaption><b>Bermain</b> jawaban yang salah ketik tetap dikenali</figcaption></figure>
+      <figure class="half"><a href="img/family100-pick.jpg"><img src="img/family100-pick.jpg" width="1440" height="900" loading="lazy" alt="Pilihan paket soal: IPA dan Informatika kelas VII dan VIII"></a><figcaption><b>Pilih paket</b> per kelas dan mata pelajaran</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Mobile line ================= -->
+<header class="line-head" id="jalur-mobile" style="--line:var(--green)" data-line="mobile">
+  <div class="wrap">
+    <div class="line-letter" aria-hidden="true">M</div>
+    <div>
+      <h2>Jalur Mobile</h2>
+      <p>Aplikasi Flutter dengan Firebase, dikerjakan dalam tim.</p>
+    </div>
+    <ol aria-label="Halte jalur Mobile">
+      <li><a href="#hamora"><span class="chip">M1</span><span>Hamora</span></a></li>
+      <li><a href="#hahatix"><span class="chip">M2</span><span>Hahatix</span></a></li>
+    </ol>
+  </div>
+</header>
+
+<section class="station is-dashed" id="hamora" data-line="mobile" style="--line:var(--green)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>Hamora <span class="codes"><span class="code">M1</span></span></h3>
+      <p class="kind-tag">Proyek kelompok</p>
+      <p class="band"><span>Tim 3 orang</span><span>Rating &amp; ulasan film</span><span>Flutter, Firebase, Node.js, MongoDB</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Aplikasi mobile untuk menilai film dan menemukan rekomendasi sesuai selera, dibuat sebagai jawaban atas kurangnya platform lokal untuk rating dan ulasan film.</p>
+        <ul>
+          <li>Autentikasi pengguna dengan Firebase: daftar, masuk, dan profil.</li>
+          <li>Beranda berisi film rekomendasi, film yang akan tayang, dan filter per genre.</li>
+          <li>Halaman detail film: pemeran, sinopsis, serta tempat memberi rating dan ulasan.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/hamora">zeniusaa/hamora</a></dd></div>
+      </dl>
+    </div>
+    <div class="platform phones">
+      <figure><a href="img/hamora-landing.jpg"><img src="img/hamora-landing.jpg" width="540" height="1078" loading="lazy" alt="Halaman pembuka Hamora: Waktunya Rating Film Tanpa Ribet, tombol Rating Sekarang"></a><figcaption><b>Pembuka</b></figcaption></figure>
+      <figure><a href="img/hamora-masuk.jpg"><img src="img/hamora-masuk.jpg" width="540" height="1078" loading="lazy" alt="Halaman masuk Hamora dengan kolom email dan password"></a><figcaption><b>Masuk</b> Firebase Auth</figcaption></figure>
+      <figure><a href="img/hamora-beranda.jpg"><img src="img/hamora-beranda.jpg" width="540" height="1000" loading="lazy" alt="Beranda Hamora: film rekomendasi dengan rating bintang, genre, dan film yang akan tayang"></a><figcaption><b>Beranda</b> rekomendasi dan genre</figcaption></figure>
+      <figure><a href="img/hamora-detail.jpg"><img src="img/hamora-detail.jpg" width="540" height="647" loading="lazy" alt="Detail film Karate Kid: Legends dengan daftar pemeran dan sinopsis"></a><figcaption><b>Detail film</b> pemeran dan sinopsis</figcaption></figure>
+    </div>
+    <p class="footnote">Screenshot aplikasi yang berjalan, diambil dari presentasi proyek kelompok (Android dan versi web).</p>
+  </div>
+</section>
+
+<section class="station is-dashed" id="hahatix" data-line="mobile" style="--line:var(--green)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>Hahatix <span class="codes"><span class="code">M2</span></span></h3>
+      <p class="kind-tag">Proyek kelompok</p>
+      <p class="band"><span>Tiket bioskop</span><span>Flutter, Cloud Firestore</span><span>Provider, get_it</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Aplikasi mobile pembelian tiket bioskop: daftar film dan jadwal tayang, memilih kursi secara interaktif, lalu membeli tiket dengan saldo dompet di aplikasi.</p>
+        <ul>
+          <li>Alur pemesanan: detail film, pilih bioskop dan jam tayang, pilih kursi, checkout, tiket tersimpan di "My Tickets".</li>
+          <li>Data film, jadwal, dan tiket di Cloud Firestore; state dikelola dengan Provider dan get_it.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/hahatix">zeniusaa/hahatix</a></dd></div>
+      </dl>
+    </div>
+    <div class="platform phones phones--6">
+      <figure><a href="img/hahatix-detail.jpg"><img src="img/hahatix-detail.jpg" width="480" height="853" loading="lazy" alt="Desain detail film dengan pemeran dan sinopsis"></a><figcaption><b>Detail film</b></figcaption></figure>
+      <figure><a href="img/hahatix-jadwal.jpg"><img src="img/hahatix-jadwal.jpg" width="480" height="853" loading="lazy" alt="Desain pilih tanggal, bioskop, dan jam tayang"></a><figcaption><b>Jadwal</b></figcaption></figure>
+      <figure><a href="img/hahatix-kursi.jpg"><img src="img/hahatix-kursi.jpg" width="480" height="853" loading="lazy" alt="Desain denah kursi dengan kursi B3 dan B4 dipilih"></a><figcaption><b>Pilih kursi</b></figcaption></figure>
+      <figure><a href="img/hahatix-checkout.jpg"><img src="img/hahatix-checkout.jpg" width="480" height="853" loading="lazy" alt="Desain checkout dengan rincian harga dan saldo dompet"></a><figcaption><b>Checkout</b></figcaption></figure>
+      <figure><a href="img/hahatix-sukses.jpg"><img src="img/hahatix-sukses.jpg" width="480" height="853" loading="lazy" alt="Desain layar sukses: Happy Watching"></a><figcaption><b>Berhasil</b></figcaption></figure>
+      <figure><a href="img/hahatix-tiket.jpg"><img src="img/hahatix-tiket.jpg" width="480" height="853" loading="lazy" alt="Desain daftar tiket saya"></a><figcaption><b>Tiket saya</b></figcaption></figure>
+    </div>
+    <p class="footnote">Gambar di atas adalah desain Figma proyek, bukan screenshot aplikasi yang berjalan. Desainnya mengikuti UI kit Flutix.</p>
+  </div>
+</section>
+
+<!-- ================= Data line ================= -->
+<header class="line-head" id="jalur-data" style="--line:var(--orange);--on-line:var(--ink)" data-line="data">
+  <div class="wrap">
+    <div class="line-letter" aria-hidden="true">D</div>
+    <div>
+      <h2>Jalur Data</h2>
+      <p>Machine learning dengan Python: dari eksplorasi data sampai aplikasi Streamlit.</p>
+    </div>
+    <ol aria-label="Halte jalur Data">
+      <li><a href="#stres"><span class="chip">D1</span><span>Prediksi Stres</span></a></li>
+      <li><a href="#sampah"><span class="chip">D2</span><span>Deteksi Sampah</span></a></li>
+    </ol>
+  </div>
+</header>
+
+<section class="station is-dashed" id="stres" data-line="data" style="--line:var(--orange);--on-line:var(--ink)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>Prediksi Stres Mahasiswa <span class="codes"><span class="code code--orange">D1</span></span></h3>
+      <p class="kind-tag">Tugas besar kelompok</p>
+      <p class="band"><span>Data Mining</span><span>Tim 3 orang</span><span>Random Forest + SMOTE</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Memprediksi tingkat stres mahasiswa (Low, Medium, High) selama pembelajaran daring dari aktivitas harian: screen time, durasi tidur, dan aktivitas fisik. Model disajikan sebagai aplikasi Streamlit.</p>
+        <ul>
+          <li>Data tidak seimbang ditangani dengan SMOTE, fitur diskalakan dengan StandardScaler.</li>
+          <li>Pengelompokan pola hidup dengan PCA, dan mutual information untuk mencari fitur paling berpengaruh: durasi tidur.</li>
+          <li>Akurasi dilaporkan apa adanya, termasuk validasi silang 5 lipatan.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Akurasi data uji</dt><dd>61,15%</dd></div>
+        <div><dt>Validasi silang</dt><dd>60,85%<small>rata-rata 5 lipatan</small></dd></div>
+        <div><dt>Kelas</dt><dd>3</dd></div>
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/DeteksiCurahHujan_Damin">zeniusaa/DeteksiCurahHujan_Damin</a></dd></div>
+      </dl>
+    </div>
+    <div class="platform">
+      <figure class="half"><a href="img/stress-result.jpg"><img src="img/stress-result.jpg" width="840" height="900" loading="lazy" alt="Aplikasi Streamlit: input data mahasiswa, hasil Prediksi Tingkat Stres Low, dan akurasi model 61,15%"></a><figcaption><b>Aplikasi</b> input, prediksi, dan akurasi</figcaption></figure>
+      <figure class="half"><a href="img/stress-features.jpg"><img src="img/stress-features.jpg" width="790" height="489" loading="lazy" alt="Grafik mutual information: durasi tidur paling berpengaruh terhadap prediksi tingkat stres"></a><figcaption><b>Fitur berpengaruh</b> durasi tidur paling tinggi</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="station is-dashed" id="sampah" data-line="data" style="--line:var(--orange);--on-line:var(--ink)">
+  <div class="rail" aria-hidden="true"></div>
+  <div class="station-inner">
+    <header class="sign">
+            <h3><svg class="gate" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="3" y="56" width="18" height="6" rx="2" fill="#15171c"/><rect x="9" y="18" width="6" height="40" rx="1.5" fill="#fff" stroke="#15171c" stroke-width="2.5"/><circle class="lamp" cx="12" cy="10" r="5.5" stroke="#15171c" stroke-width="2.5"/><g class="arm"><rect x="12" y="23.5" width="36" height="7" rx="3.5" fill="#fff" stroke="#15171c" stroke-width="2"/><rect class="stripe" x="19" y="24.5" width="6.5" height="5"/><rect class="stripe" x="29" y="24.5" width="6.5" height="5"/><rect class="stripe" x="39" y="24.5" width="6.5" height="5"/><circle cx="12" cy="27" r="3.5" fill="#15171c"/></g></svg>Deteksi Jenis Sampah <span class="codes"><span class="code code--orange">D2</span></span></h3>
+      <p class="kind-tag">Tugas kuliah</p>
+      <p class="band"><span>CNN</span><span>ResNet34 transfer learning</span><span>fastai, Streamlit</span></p>
+    </header>
+    <div class="body-grid">
+      <div class="prose">
+        <p>Mengklasifikasikan foto sampah ke 6 jenis (cardboard, glass, metal, paper, plastic, trash). Aplikasi Streamlit menampilkan probabilitas tiap kelas dan tips penanganan atau daur ulang.</p>
+        <ul>
+          <li>Transfer learning ResNet34 dengan fastai, dilatih dengan learning rate finder dan fine-tuning.</li>
+          <li>Evaluasi dengan confusion matrix untuk melihat kelas yang sering tertukar, misalnya glass dan plastic.</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Akurasi</dt><dd>83,78%</dd></div>
+        <div><dt>Kelas</dt><dd>6</dd></div>
+        <div class="repo"><dt>Kode</dt><dd><a href="https://github.com/zeniusaa/Deteksi_Sampah_CNN">zeniusaa/Deteksi_Sampah_CNN</a></dd></div>
+      </dl>
+    </div>
+    <div class="platform">
+      <figure class="half"><a href="img/sampah-batch.jpg"><img src="img/sampah-batch.jpg" width="1440" height="1178" loading="lazy" alt="Contoh batch data latih: foto plastik, kaca, logam, dan kardus beserta labelnya"></a><figcaption><b>Data latih</b> contoh gambar berlabel</figcaption></figure>
+      <figure class="half"><a href="img/sampah-confusion.jpg"><img src="img/sampah-confusion.jpg" width="1440" height="1234" loading="lazy" alt="Confusion matrix enam kelas sampah; paper dan cardboard paling akurat, glass sering tertukar dengan plastic"></a><figcaption><b>Confusion matrix</b> 6 kelas</figcaption></figure>
+    </div>
+    <p class="footnote">Gambar diambil dari notebook pelatihan; file model lama tidak bisa dimuat dengan versi fastai terbaru.</p>
+  </div>
+</section>
+
+<!-- ================= Career ================= -->
+<section class="career" id="karier" data-line="karier">
+  <div class="wrap">
+    <h2>Jalur karier</h2>
+    <p class="intro">Dari kampus ke bank, hosting, magang backend, sampai pekerjaan sekarang.</p>
+    <ol class="route">
+      <li><p class="when">2022 - 2026</p><h3>UM Bandung</h3><p>S1 Teknik Informatika, IPK 3,68.</p></li>
+      <li><p class="when">Sep - Des 2025</p><h3>Bank Syariah Indonesia</h3><p>Intern Retail Financing Operation: verifikasi dokumen legal dan validasi data.</p></li>
+      <li><p class="when">Des 2025 - Jan 2026</p><h3>Sistar Company</h3><p>IT Support &amp; Web Hosting Administrator (freelance).</p></li>
+      <li><p class="when">Jun - Agu 2026</p><h3>Academy Baitul Maqdis</h3><p>Backend Developer Intern: HAMIM API.</p></li>
+      <li class="now"><p class="when">Sep 2026 - sekarang</p><h3>Fortasindo</h3><p>IT &amp; Software Developer: PumpHealth dan website perusahaan.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= Skills ================= -->
+<section class="skills" id="keahlian" data-line="karier">
+  <div class="wrap">
+    <h2>Keahlian per jalur</h2>
+    <p class="intro">Disusun menurut jalur yang sama dengan peta di atas.</p>
+    <div class="skill-table">
+      <div class="skill-row" style="--c:var(--red)"><h3><i class="swatch" style="--c:var(--red)"></i>Backend</h3><p>PHP (Laravel), Node.js (Express, Prisma ORM), REST API, JWT dan OAuth, MySQL: skema, query, transaksi</p></div>
+      <div class="skill-row" style="--c:var(--blue)"><h3><i class="swatch" style="--c:var(--blue)"></i>Web</h3><p>React, TypeScript, Inertia.js, Tailwind CSS, Blade, JavaScript, HTML/CSS</p></div>
+      <div class="skill-row" style="--c:var(--green)"><h3><i class="swatch" style="--c:var(--green)"></i>Mobile</h3><p>Flutter, Dart, Firebase dan Cloud Firestore</p></div>
+      <div class="skill-row" style="--c:var(--orange)"><h3><i class="swatch" style="--c:var(--orange)"></i>Data</h3><p>Python, pandas, scikit-learn, fastai, Streamlit</p></div>
+      <div class="skill-row"><h3>Kualitas</h3><p>PHPUnit, Postman, GitHub Actions, Git dan GitHub, Docker (dasar)</p></div>
+      <div class="skill-row"><h3>Lainnya</h3><p>Hosting, domain/DNS dan SSL; Bahasa Indonesia (native), Inggris (intermediate)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Terminus ================= -->
+<section class="terminus" id="kontak" data-line="kontak">
+  <div class="wrap">
+    <div>
+      <h2>Terminal</h2>
+      <p>Terbuka untuk posisi Backend atau Fullstack Developer dan program magang. Cara tercepat menghubungi saya lewat email.</p>
+      <a class="contact-mail" href="mailto:keyra6566@gmail.com">keyra6566@gmail.com</a>
+      <p><a href="https://github.com/zeniusaa">github.com/zeniusaa</a> &middot; Bandung, Jawa Barat</p>
+    </div>
+    <table class="credits">
+      <caption>Kredit</caption>
+      <thead><tr><th scope="col">Proyek</th><th scope="col">Konteks</th><th scope="col">Tim</th></tr></thead>
+      <tbody>
+        <tr><td>PumpHealth</td><td>Pekerjaan</td><td>PT Performa Integritas Indonesia (Fortasindo)</td></tr>
+        <tr><td>HAMIM API</td><td>Magang</td><td>Academy Baitul Maqdis</td></tr>
+        <tr><td>Sistem HT-el</td><td>Tugas Akhir</td><td>Universitas Muhammadiyah Bandung</td></tr>
+        <tr><td>Hamora</td><td>Proyek kelompok</td><td>Indra Darmawan, Raka Zeniusa Barron, Tubagus Daffa Nabil Dhaifullah</td></tr>
+        <tr><td>Prediksi Stres</td><td>Tugas besar Data Mining</td><td>Raka Zeniusa Barron, Shofa Farhah Tanzilah, Arina Sabilana</td></tr>
+        <tr><td>Hahatix</td><td>Proyek kelompok</td><td>Anggota tim tidak tercantum di repo</td></tr>
+      </tbody>
+    </table>
+    <div class="colophon">
+      <span>Huruf: Barlow dan Barlow Condensed (SIL Open Font License).</span>
+      <span>Screenshot PumpHealth memakai data demo fiktif.</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('animate' in Element.prototype)) return;
+  document.documentElement.classList.add('motion');
+  const ease = 'cubic-bezier(.16,1,.3,1)';
+  const ns = 'http://www.w3.org/2000/svg';
+
+  /* papan nama: garis warna menyapu, nama naik dari balik tepi */
+  const plate = document.querySelector('.nameplate');
+  plate.querySelectorAll('.stripe i').forEach((el, i) => el.animate(
+    [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }],
+    { duration: 520, delay: 80 + i * 90, easing: ease, fill: 'backwards' }));
+  plate.querySelector('h1').animate(
+    [{ clipPath: 'inset(0 0 100% 0)', transform: 'translateY(28px)' }, { clipPath: 'inset(0 0 0 0)', transform: 'none' }],
+    { duration: 760, delay: 160, easing: ease, fill: 'backwards' });
+  [...plate.querySelectorAll('.role, .lead, .departure, .actions')].forEach((el, i) => el.animate(
+    [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }],
+    { duration: 560, delay: 420 + i * 80, easing: ease, fill: 'backwards' }));
+
+  /* peta: jalur digambar dari terminal kampus, halte muncul saat garis tiba */
+  const svg = document.querySelector('.map');
+  const SPEED = 0.3, T0 = 520; // px per ms, jeda awal
+  const at = (d) => T0 + d / SPEED;
+  svg.querySelector('.terminal').animate(
+    [{ opacity: 0, transform: 'scale(.6)' }, { opacity: 1, transform: 'none' }],
+    { duration: 420, delay: T0 - 260, easing: ease, fill: 'backwards' });
+  const defs = document.createElementNS(ns, 'defs');
+  svg.prepend(defs);
+  svg.querySelectorAll('.track path').forEach((p, i) => {
+    const len = p.getTotalLength();
+    const mask = document.createElementNS(ns, 'mask');
+    mask.id = 'draw-' + i;
+    mask.setAttribute('maskUnits', 'userSpaceOnUse');
+    mask.setAttribute('x', 0); mask.setAttribute('y', 0);
+    mask.setAttribute('width', 800); mask.setAttribute('height', 600);
+    const m = document.createElementNS(ns, 'path');
+    m.setAttribute('d', p.getAttribute('d'));
+    m.setAttribute('fill', 'none');
+    m.setAttribute('stroke', '#fff');
+    m.setAttribute('stroke-width', '16');
+    m.setAttribute('stroke-dasharray', len + ' ' + len);
+    m.setAttribute('stroke-dashoffset', len);
+    mask.append(m);
+    defs.append(mask);
+    p.setAttribute('mask', 'url(#draw-' + i + ')');
+    const a = m.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
+      { duration: len / SPEED, delay: at(+p.dataset.start), easing: 'linear', fill: 'both' });
+    a.onfinish = () => p.removeAttribute('mask');
+  });
+  const pulse = (cx, cy, color, n = 2) => {
+    const c = document.createElementNS(ns, 'circle');
+    c.setAttribute('class', 'pulse');
+    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', 15);
+    c.setAttribute('fill', 'none'); c.setAttribute('stroke', color); c.setAttribute('stroke-width', 3);
+    svg.append(c);
+    c.animate([{ transform: 'scale(1)', opacity: .8 }, { transform: 'scale(2.6)', opacity: 0 }],
+      { duration: 1000, iterations: n, easing: 'cubic-bezier(.2,.6,.3,1)' }).onfinish = () => c.remove();
+  };
+  svg.querySelectorAll('.stop').forEach((stop) => {
+    const t = at(+stop.dataset.at);
+    const marker = stop.querySelector('.marker');
+    marker.animate([{ transform: 'scale(0)' }, { transform: 'scale(1.35)', offset: .6 }, { transform: 'scale(1)' }],
+      { duration: 460, delay: t - 60, easing: ease, fill: 'backwards' });
+    [...stop.children].filter((el) => el !== marker).forEach((el) => el.animate(
+      [{ opacity: 0, transform: 'translateY(5px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 420, delay: t + 80, easing: ease, fill: 'backwards' }));
+    if (stop.getAttribute('href') === '#pumphealth') setTimeout(() => pulse(400, 250, '#15171c'), t + 120);
+  });
+  document.querySelector('.legend').animate([{ opacity: 0 }, { opacity: 1 }],
+    { duration: 500, delay: at(470) + 200, fill: 'backwards' });
+
+  /* kereta: kampus -> HAMIM -> PumpHealth, hanya saat peta terlihat */
+  const train = document.getElementById('train');
+  const run = document.getElementById('train-run');
+  let visible = true, started = false, timer = null;
+  const depart = () => {
+    clearTimeout(timer);
+    timer = null;
+    if (!visible || document.hidden) return;
+    train.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 250, fill: 'forwards' });
+    run.beginElement();
+    timer = setTimeout(() => {
+      pulse(400, 250, '#d4262f', 1);
+      train.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 450, delay: 500, fill: 'forwards' });
+      timer = setTimeout(depart, 6000);
+    }, 3800);
+  };
+  new IntersectionObserver(([e]) => {
+    visible = e.isIntersecting;
+    if (visible) { svg.unpauseAnimations(); if (started && !timer) depart(); }
+    else { svg.pauseAnimations(); clearTimeout(timer); timer = null; }
+  }).observe(svg);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && visible && started && !timer) depart(); });
+  setTimeout(() => { started = true; depart(); }, at(470) + 400);
+
+  /* jalur karier: garis tergambar lalu halte menyala satu per satu */
+  const route = document.querySelector('.route');
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) route.classList.add('go');
+    route.classList.toggle('live', e.isIntersecting);
+  }, { threshold: .35 }).observe(route);
+})();
+
+(() => {
+  const nav = document.querySelectorAll('.lines-nav a');
+  const setNav = (key) => nav.forEach(a => a.setAttribute('aria-current', String(a.dataset.nav === key)));
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.target.classList.contains('station')) e.target.classList.toggle('is-here', e.isIntersecting);
+      if (e.isIntersecting) setNav(e.target.dataset.line);
+    }
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  document.querySelectorAll('[data-line]').forEach(el => io.observe(el));
+  const hero = document.getElementById('rute');
+  new IntersectionObserver(([e]) => { if (e.isIntersecting) setNav('rute'); }, { rootMargin: '-45% 0px -45% 0px' }).observe(hero);
+})();
+</script>
+</body>
+</html>
